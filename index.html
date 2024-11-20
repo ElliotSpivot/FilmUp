@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plantilla series y películas todo en uno</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<div class="xaviec">
+<play>
+  <h1 style="color:#fff000;font-size:35px;">Film<strong style="color:red;">Up 🇨🇴</strong></h1>
+  <input id="myInput" type="search" placeholder="Buscar..." size="10" style="border-radius: 6px; outline: none; border: 1px solid red; padding: 4px 4px; font-size: 12pt; margin-right: 25px;">
+</play>
+<div class="wrapper">
+  <nav>
+<div class="items">
+<span class="item active" data-name="all">Todos</span>
+<span class="item" data-name="peliculas">Peliculas</span>
+
+<span class="item" data-name="series">Series</span>
+<span class="item" data-name="pedidos">Pedidos</span>
+<form id="pedidoForm" method="POST" enctype="multipart/form-data">
+  <div class="mb-3">
+<label for="tipo" class="form-label">Tipo</label>
+<select class="form-select" id="tipo" name="tipo" required>
+<option value="pelicula">Película</option>
+<option value="serie">Serie</option>
+</select>
+  </div>
+  <div class="mb-3">
+<label for="nombre" class="form-label">Nombre</label>
+<input type="text" class="form-control" id="nombre" name="nombre" required>
+  </div>
+  <div class="mb-3">
+<label for="anio" class="form-label">Año</label>
+<input type="number" class="form-control" id="anio" name="anio" required>
+  </div>
+  <div class="mb-3">
+<label for="imagen" class="form-label">Portada</label>
+<input type="file" class="form-control" id="imagen" name="imagen" accept="image/*">
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+</div>
+  </nav>
+</div>
+</div>
+<br><br><br><br>
+<div class="gallery">
+
+
+<div class="poster" data-name="series" title="The Flash 2014 barry allen the flash flash grant gustin">
+  <span><img height="140px" src="https://image.tmdb.org/t/p/original/7ci4qqkBJorLxSBwTj28vwh0bU.jpg" width="110px"></span>
+</div>
+<div class="poster" data-name="series" title="El libro de bobafet">
+  <span><img height="140px" src="https://www.themoviedb.org/t/p/original/gNbdjDi1HamTCrfvM9JeA94bNi2.jpg" width="110px"></span>
+</div>
+<div class="poster" data-name="series" title="Rebelde">
+  <span><img height="140px" src="https://www.themoviedb.org/t/p/original/b1IBsimEJOLjBLYsdBZ1VAcmq73.jpg" width="110px"></span>
+</div>
+<div class="poster" data-name="peliculas" title="Harry Potter">
+  <span><img height="140px" src="https://www.themoviedb.org/t/p/original/1whbe62WT52o6hjTJ8q1A9zehxS.jpg" width="110px"></span>
+</div>
+<div class="poster" data-name="series" title="Cobra Kai">
+  <span><img height="140px" src="https://www.themoviedb.org/t/p/original/6POBWybSBDBKjSs1VAQcnQC1qyt.jpg" width="110px"></span>
+</div>
+<div class="poster" data-name="series" title="Elfos">
+  <span><img height="140px" src="https://www.themoviedb.org/t/p/original/6upMMT2Uz4bhJabBCWhYKESIbF4.jpg" width="110px"></span>
+</div>
+
+
+</div>
+<br>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="scripts.js"></script>
+</body>
+</html>
